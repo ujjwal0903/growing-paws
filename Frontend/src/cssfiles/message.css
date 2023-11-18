@@ -1,0 +1,32 @@
+/* YourComponent.css */
+.content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .card-body{
+        z-index: 1;
+  }
+  #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+    opacity: 0.5;
+  }
+  
+  .content-container {
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+    /* color: #fff; Set text color for your content */
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.7); 
+  }
