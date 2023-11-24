@@ -1,9 +1,12 @@
 import React from 'react'
 import {SignupCss} from '../cssfiles/sign-up.css'
+import Navbar from '../body/sections/Navbar'
 
 export default function Signup()
 {
     return (
+        <>
+        <Navbar/>
         <div className='all'>
         <div class="contain">
     <form action="">
@@ -27,5 +30,6 @@ export default function Signup()
     </form>
 </div>
 </div>
+</>
     )
 }

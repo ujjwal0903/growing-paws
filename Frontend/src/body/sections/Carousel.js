@@ -11,14 +11,14 @@ export default function Carousel() {
         id='carouselExampleInterval'
         class='carousel slide'
         data-bs-ride='carousel'>
-        <div class='carousel-inner' style={{ height: '43rem' }}>
-          <div class='carousel-item active' data-bs-interval='5000'>
+        <div class='carousel-inner' style={{ height: '37rem' }}>
+          <div class='carousel-item active' data-bs-interval='3000'>
             <img src={i1} class='d-block w-100' alt='...' />
           </div>
-          <div class='carousel-item' data-bs-interval='5000'>
+          <div class='carousel-item' data-bs-interval='3000'>
             <img src={i2} class='d-block w-100' alt='...' />
           </div>
-          <div class='carousel-item' data-bs-interval='5000'>
+          <div class='carousel-item' data-bs-interval='3000'>
             <img src={i3} class='d-block w-100' alt='...' />
           </div>
         </div>

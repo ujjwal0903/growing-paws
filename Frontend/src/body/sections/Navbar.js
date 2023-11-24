@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
       <nav id='n' class='navbar navbar-expand-lg  py-4  bg-dark'>
         <div class='container-fluid ms-auto ' >
-          <a class='navbar-brand text-white ms-5 ' href='#'>
+          <a class='navbar-brand text-white ms-5 ' href='/'>
             mail@growing.com
           </a>
           
