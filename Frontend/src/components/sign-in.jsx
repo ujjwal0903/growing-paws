@@ -4,26 +4,30 @@ import Navbar from '../body/sections/Navbar'
 
 export default function Signup()
 {
+    const handleForm=(e)=>{
+        console.log(e.target.value)
+    }
+
     return (
         <>
         <Navbar/>
         <div className='all'>
-        <div class="contain">
+        <div className="contain">   
     <form action="">
         <h1>Sign up</h1>
-        <div class="input">
-            <input type="text" placeholder="Full Name" required="true"/>
+        <div className="input">
+            <input type="text" onChange={handleForm} placeholder="Full Name" required="true"/>
         </div>
-        <div class="input">
-            <input type="text" placeholder="Username" required="true"/>
+        <div className="input">
+            <input type="text" onChange={handleForm} placeholder="Username" required="true"/>
         </div>
-        <div class="input">
-            <input type="text" placeholder="Email" required="true"/>
+        <div className="input">
+            <input type="text" onChange={handleForm} placeholder="Email" required="true"/>
         </div>
-        <div class="input">
-            <input type="password" placeholder="Password" required="true"/>
+        <div className="input">
+            <input type="password" onChange={handleForm} placeholder="Password" required="true"/>
         </div>
-    <button type="submit" class="submit-btn">Sign up</button>
+    <button type="submit" className="submit-btn">Sign up</button>
     <p> Already have an account?
     <a href="/login">Login</a>
     </p>
