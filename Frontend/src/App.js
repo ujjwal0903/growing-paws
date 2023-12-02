@@ -10,10 +10,7 @@ import Routing from './Routing'
 export default function App() {
   return (
     <>
-      {/* ---- THIS IS FOR THE HOMEPAGE COMPONENTS ------*/}
-
      <Routing/>
-      
     </>
   );
 }
