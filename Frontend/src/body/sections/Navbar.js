@@ -42,7 +42,7 @@ export default function Navbar() {
               </li>
               <li class='nav-item'>
                 {/* <a class='nav-link disabled text-white' aria-disabled='true'> */}
-                <a class='nav-link text-white me-2' href='#'>
+                <a class='nav-link text-white me-2' href='/login'>
                  Login
                 </a>
               </li>
