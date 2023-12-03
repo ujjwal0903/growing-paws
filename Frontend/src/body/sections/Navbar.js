@@ -5,44 +5,44 @@ import NavbarCss from '../../cssfiles/navbar.css'
 export default function Navbar() {
   return (
     <>
-      <nav id='n' class='navbar navbar-expand-lg  py-4  bg-dark'>
-        <div class='container-fluid ms-auto ' >
-          <a class='navbar-brand text-white ms-5 ' href='/'>
+      <nav id='n' className='navbar navbar-expand-lg  py-4  bg-dark'>
+        <div className='container-fluid ms-auto ' >
+          <a className='navbar-brand text-white ms-5 ' href='/'>
             mail@growing.com
           </a>
           
-          <div class='collapse navbar-collapse ' id='navbarNav'>
-            <ul class='navbar-nav ms-auto'>
-              <li class='nav-item'>
-                <a class='nav-link active text-white me-2' aria-current='page' href='#' font-weight-bold>
+          <div className='collapse navbar-collapse ' id='navbarNav'>
+            <ul className='navbar-nav ms-auto'>
+              <li className='nav-item'>
+                <a className='nav-link active text-white me-2' aria-current='page' href='#' font-weight-bold>
                   Web Stories
                 </a>
               </li>
-              <li class='nav-item'>
-                <a class='nav-link text-white me-2' href='#' font-weight-bold>
+              <li className='nav-item'>
+                <a className='nav-link text-white me-2' href='#' font-weight-bold>
                   Blog
                 </a>
               </li>
-              <li class='nav-item'>
-                <a class='nav-link text-white me-2' href='#'>
+              <li className='nav-item'>
+                <a className='nav-link text-white me-2' href='#'>
                   FAQ's
                 </a>
               </li>
-              <li class='nav-item'>
-                {/* <a class='nav-link disabled text-white' aria-disabled='true'> */}
-                <a class='nav-link text-white me-2'  href='#'>
+              <li className='nav-item'>
+                {/* <a className='nav-link disabled text-white' aria-disabled='true'> */}
+                <a className='nav-link text-white me-2'  href='#'>
                   About Us
                 </a>
               </li>
-              <li class='nav-item'>
-                {/* <a class='nav-link disabled text-white' aria-disabled='true'> */}
-                <a class='nav-link text-white me-2' href='/signup'>
+              <li className='nav-item'>
+                {/* <a className='nav-link disabled text-white' aria-disabled='true'> */}
+                <a className='nav-link text-white me-2' href='/signup'>
                   Sign Up
                 </a>
               </li>
-              <li class='nav-item'>
-                {/* <a class='nav-link disabled text-white' aria-disabled='true'> */}
-                <a class='nav-link text-white me-2' href='/login'>
+              <li className='nav-item'>
+                {/* <a className='nav-link disabled text-white' aria-disabled='true'> */}
+                <a className='nav-link text-white me-2' href='/login'>
                  Login
                 </a>
               </li>

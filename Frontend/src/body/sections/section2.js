@@ -6,14 +6,14 @@ export default function Section2(props) {
     
     <div style={{zIndex:'1',marginTop:'30px'}}>
         
-      <div class='card' style={{ width:'155px' }}>
-        <img class='card-img-top' style={{height:'155px',margin:'5px'}} src={props.img} alt='Card image' />
-        <div class='card-body'>
-            <h4 className='card-title'>{props.title}</h4>
-          <p class='card-text'>
+      <div className='card' style={{ width:'155px' }}>
+        <img className='card-img-top' style={{height:'155px',margin:'5px'}} src={props.img} alt='Card image' />
+        <div className='card-body'>
+            <h4 classNameName='card-title'>{props.title}</h4>
+          <p className='card-text'>
             {props.para}
           </p>
-          <a href='#' class='btn btn-primary'>
+          <a href='#' className='btn btn-primary'>
             Explore
           </a>
         </div>

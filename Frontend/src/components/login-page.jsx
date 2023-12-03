@@ -8,18 +8,18 @@ export default function Login()
         <>
         <Navbar/>
         <div className='all'>
-        <div class="contain">
+        <div className="contain">
     <form action="">
         <h1>Login</h1>
         
-        <div class="input">
+        <div className="input">
             <input type="text" placeholder="Email" required="true"/>
         </div>
-        <div class="input">
+        <div className="input">
             <input type="password" placeholder="Password" required="true"/>
         </div>
 
-    <button type="submit" class="submit-btn">Login</button>
+    <button type="submit" className="submit-btn">Login</button>
     
     <a href="/signup">Create Account</a>
 
