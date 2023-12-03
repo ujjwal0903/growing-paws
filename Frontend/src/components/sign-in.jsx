@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {SignupCss} from '../cssfiles/sign-up.css'
 import Navbar from '../body/sections/Navbar'
-
+import { handleSubmit } from '../axios_file'
 export default function Signup()
 {
     const [form,setform]=useState({})
@@ -14,9 +14,24 @@ export default function Signup()
             [e.target.name]:e.target.value
         })
     }
-    const handlesubmit=(e)=>{
+    const handlesubmit=async(e)=>{
         e.preventDefault();
-        console.log(form)
+
+        //----------this is for the fetch -----------------
+
+
+        // const response=await fetch('http://localhost:5000/signup',{
+        //     method:'POST',
+        //     body:JSON.stringify(form),
+        //     headers:{
+        //         'Content-type':'application/json'
+        //     }
+        // })
+        
+        // const data=await response.json();
+        // console.log(data)
+        await handleSubmit(form)
+        
     }
 
     return (
