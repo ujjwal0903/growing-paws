@@ -14,12 +14,12 @@ export default function Navbar() {
           <div className='collapse navbar-collapse ' id='navbarNav'>
             <ul className='navbar-nav ms-auto'>
               <li className='nav-item'>
-                <a className='nav-link active text-white me-2' aria-current='page' href='#' font-weight-bold>
+                <a className='nav-link active text-white me-2' aria-current='page' href='#' font-weight-bold="true">
                   Web Stories
                 </a>
               </li>
               <li className='nav-item'>
-                <a className='nav-link text-white me-2' href='#' font-weight-bold>
+                <a className='nav-link text-white me-2' href='#' font-weight-bold="true">
                   Blog
                 </a>
               </li>
