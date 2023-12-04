@@ -4,6 +4,8 @@ import Navbar from '../body/sections/Navbar'
 
 export default function Login()
 {
+
+
     return (
         <>
         <Navbar/>
@@ -13,10 +15,10 @@ export default function Login()
         <h1>Login</h1>
         
         <div className="input">
-            <input type="text" placeholder="Email" required="true"/>
+            <input type="text" name='email' placeholder="Email" required="true"/>
         </div>
         <div className="input">
-            <input type="password" placeholder="Password" required="true"/>
+            <input type="password" name='password' placeholder="Password" required="true"/>
         </div>
 
     <button type="submit" className="submit-btn">Login</button>
