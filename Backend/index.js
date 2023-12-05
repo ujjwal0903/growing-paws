@@ -43,6 +43,13 @@ app.post("/signup",async (req,res)=>{
     console.log(doc)
 
 })
+const usercheck=User.userName;
+// const mail=req.body.email
+app.get('/user:email',async(req,res)=>{
+   let user=new User();
+   user.email=req.body.email
+    console.log(fetchid);
+})
 
 
 

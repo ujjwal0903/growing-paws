@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import {SignupCss} from '../cssfiles/sign-up.css'
 import Navbar from '../body/sections/Navbar'
 import { handleSubmit } from '../axios_file'
+
+
 export default function Signup()
 {
     const [form,setform]=useState({})
