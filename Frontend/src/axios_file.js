@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const handleSubmit = async (form) => {
   try {
-    const response = await axios.post('http://localhost:5000/signup', form, {
+    let response = await axios.post('http://localhost:5000/signup', form, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -18,8 +18,10 @@ export const handleSubmit = async (form) => {
 
 
 export const handleLoginSubmit= async (loginForm)=>{
+
+  
   try {
-    const response = await axios.post('http://localhost:5000/signup/login', loginForm, {
+    let response = await axios.post('http://localhost:5000/user', loginForm, {
       headers: {
         'Content-Type': 'application/json',
       },

@@ -11,13 +11,13 @@ export default function Login() {
     // console.log(e.target.value,e.target.name)
 
     setLoginform({
-      ...loginForm,
+      // ...loginForm,
       [e.target.name]: e.target.value
     });
   };
 
   const handleLoginSubmit=async (e)=>{
-    e.preventDefault();
+    // e.preventDefault();
     await handleLoginSubmit(loginForm)
   }
 
