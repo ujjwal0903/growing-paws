@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -6,7 +7,7 @@ const BodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Collection=require('mongoose')
 const bcrypt = require('bcrypt')
-const {signAccessToken}= require('./jwt_auth')
+const {signAccessToken}= require('./helper/jwt_auth')
 // const signin=require('/Frontend/src/pages/sign-in.jsx')
 
 app.use(express.urlencoded({ extended: false }));
@@ -74,6 +75,7 @@ app.post('/signup', async (req, res) => {
   user.password = req.body.password;
 
   //--- saving the data of the user from signup form to database
+  
   const saveuser = await user.save();
   const  accessToken=await signAccessToken(saveuser._id)  
   res.send(accessToken);
