@@ -18,20 +18,6 @@ export default function Signup()
     }
     const handlesubmit=async(e)=>{
         e.preventDefault();
-
-        //----------this is for the fetch -----------------
-
-
-        // const response=await fetch('http://localhost:5000/signup',{
-        //     method:'POST',
-        //     body:JSON.stringify(form),
-        //     headers:{
-        //         'Content-type':'application/json'
-        //     }
-        // })
-        
-        // const data=await response.json();
-        // console.log(data)
         await handleSubmit(form)
         
     }

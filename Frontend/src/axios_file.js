@@ -16,19 +16,19 @@ export const handleSubmit = async (form) => {
   }
 };
 
-
-export const handleLoginSubmit= async (loginForm)=>{
-
+export const handleLoginSubmit = async (form) => {
   
-  try {
-    let response = await axios.post('http://localhost:5000/user', loginForm, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    console.log(response.data);
-  } catch (error) {
-    console.error('Error submitting form:', error);
-  }
-}
+  await axios
+  .post('http://localhost:5000/userlogin',form,{
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  .then((res) => {
+    
+    console.log(res.data)
+  })
+  .catch((error) => {
+    console.log("axios error",error);
+  });
+};

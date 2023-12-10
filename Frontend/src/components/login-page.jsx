@@ -1,35 +1,54 @@
 import React, { useState } from 'react';
 import { SignupCss } from '../cssfiles/sign-up.css';
 import Navbar from '../body/sections/Navbar';
-import { handleSubmit } from '../axios_file';
-import { handleLoginSubmit } from '../axios_file';
-
+// import { handleSubmit } from '../axios_file';
+// import { handleLoginSubmit } from '../axios_file';
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom' 
 
 export default function Login() {
-  const [loginForm, setLoginform] = useState({});
+  const navigate=useNavigate();
+  const [form, setform] = useState({});
   const handleLogin = (e) => {
     // console.log(e.target.value,e.target.name)
 
-    setLoginform({
-      // ...loginForm,
+    setform({
+      ...form,
       [e.target.name]: e.target.value
     });
   };
 
   const handleLoginSubmit=async (e)=>{
-    // e.preventDefault();
-    await handleLoginSubmit(loginForm)
+    e.preventDefault();
+
+     await axios
+      .post('http://localhost:5000/userlogin',form,{
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then((res) => {
+        
+        console.log(res.data)
+        navigate('/')
+      })
+      .catch((error) => {
+        console.log("axios error",error);
+      });
+      
+
+  
   }
 
-  return (
+  return (  
     <>
       <Navbar />
       <div className='all'>
 
-      {/* <p>{JSON.stringify(loginForm)}</p> */}
+      {/* <p>{JSON.stringify(form)}</p> */}
 
         <div className='contain'>
-          <form action='' onSubmit={handleLoginSubmit}>
+          <form onSubmit={handleLoginSubmit}>
             <h1>Login</h1>
 
             <div className='input'>
