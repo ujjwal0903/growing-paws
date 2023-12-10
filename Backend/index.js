@@ -4,6 +4,9 @@ const cors = require('cors');
 const path = require('path');
 const BodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const Collection=require('mongoose')
+const bcrypt = require('bcrypt')
+const {signAccessToken}= require('./jwt_auth')
 // const signin=require('/Frontend/src/pages/sign-in.jsx')
 
 app.use(express.urlencoded({ extended: false }));
@@ -13,10 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 //------mongoDB connection-----------
 main().catch((err) => console.log(err));
 
-async function main() {
+async function main(){
   await mongoose.connect('mongodb://127.0.0.1:27017/project_db');
   console.log('db connected');
 }
+
 //-----making schema
 const userSchema = new mongoose.Schema({
   fullName: String,
@@ -26,49 +30,54 @@ const userSchema = new mongoose.Schema({
 });
 
 
+app.use(cors());
+app.use(BodyParser.json());
+
+
+
+//-------this is for login of the user
+app.post('/userlogin', async (req, res) => {
+  try{
+    let usercheck=await User.findOne({Email:req.body.email})
+    console.log("user exist",usercheck)
+    
+  }
+  catch{
+    console.log("user not found")
+  }
+})
+  
+
+//---------encryption of password
+userSchema.pre('save',async function (next){
+  try {
+    const salt=await bcrypt.genSalt(10)
+    const hashedpassword=await bcrypt.hash(this.password,salt)
+    this.password=hashedpassword
+    next()
+  } catch (error) {
+    next(error)
+  }
+})
 
 //------making model for mongodb
 const User = mongoose.model('User', userSchema);
 
 
-app.use(cors());
-app.use(BodyParser.json());
-
-
-app.get('/user/:email', async (req, res) => {
-    try {
-      let user = await User.exists({ email: req.query.email});
-     
-        
-      if (user) {
-        console.log('User exists');
-        // res.status(200).json({ exists: true });
-        res.send('exist')
-        
-      } else {
-        console.log('User does not exist');
-        // res.status(404).json({ exists: false });
-        res.send('doesnt exist')
-      }
-    } catch (error) {
-      console.error('Error checking user existence:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
-  
-
-
-
+//----------this is for signup of the user 
 app.post('/signup', async (req, res) => {
   let user = new User();
+
   user.fullName = req.body.fullname;
   user.userName = req.body.username;
   user.Email = req.body.email;
   user.password = req.body.password;
 
-  const doc = await user.save();
-  res.send(doc);
-  console.log(doc);
+  //--- saving the data of the user from signup form to database
+  const saveuser = await user.save();
+  const  accessToken=await signAccessToken(saveuser._id)  
+  res.send(accessToken);
+  console.log(accessToken);
 });
 
 // const User = mongoose.model('User', Schema({ name: String, email: String }));
