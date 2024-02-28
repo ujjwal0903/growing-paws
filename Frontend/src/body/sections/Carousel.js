@@ -1,5 +1,4 @@
 import React from 'react';
-import Reactdom from 'react-dom';
 import { i1, i2, i3 } from '../images';
 
 // import { CarouselStyle } from '../cssfiles/Carousel.css';
@@ -8,7 +7,9 @@ export default function Carousel() {
   return (
     <>
       <div
-         className='carousel slide' data-bs-ride='carousel'>
+        id='carouselExampleInterval'
+        className='carousel slide'
+        data-bs-ride='carousel'>
         <div className='carousel-inner' style={{ height: '37rem' }}>
           <div className='carousel-item active' data-bs-interval='3000'>
             <img src={i1} className='d-block w-100' alt='...' />

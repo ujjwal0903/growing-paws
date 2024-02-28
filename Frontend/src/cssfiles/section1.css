@@ -1,20 +1,17 @@
-
 h1 {
   color: #fff;
 }
 .lead {
   color: #aaa;
 }
-#first{
-    opacity: 0.5;
+#first {
+  opacity: 0.5;
 }
 .wrapper {
   margin: 10vh;
-
 }
 
 .card {
-    
   border: none;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
@@ -35,21 +32,18 @@ h1 {
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center center;
-        
-    
+
     &:before {
-        opacity: 0.7;
-        background-image: url('../body/images/camilo-fierro-z7rcwqCi77s-unsplash.jpg'); /* Replace 'your-image.jpg' with the path to your image */
-    background-size: cover;
-       
-        /* opacity: 0.5; */
-        content: '';
-      /* position: absolute; */
+      opacity: 0.7;
+      background-image: url("../body/images/camilo-fierro-z7rcwqCi77s-unsplash.jpg"); /* Replace 'your-image.jpg' with the path to your image */
+      background-size: cover;
+
+      content: "";
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      
+
       -webkit-filter: grayscale(1);
       -moz-filter: grayscale(100%);
       -ms-filter: grayscale(100%);
@@ -64,8 +58,6 @@ h1 {
       transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 
       .card-img-overlay #card1 #card2 #card3 {
-        
-        
         transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
         background: rgba(255, 186, 33, 1);
         background: linear-gradient(
@@ -88,7 +80,6 @@ h1 {
   .card-title {
     font-weight: 800;
   }
-  
 
   .card-meta {
     color: rgba(0, 0, 0, 0.3);
@@ -96,53 +87,44 @@ h1 {
     font-weight: 500;
     letter-spacing: 2px;
   }
-  
-  
+
   .card-body {
-      
-      transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &:hover {
+    .card-body {
+      margin-top: 30px;
+      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     }
-    &:hover {
-        .card-body {
-            
-            margin-top: 30px;
-            transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-        }
     cursor: pointer;
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.card-img-overlay {
-   
+  }
+  .card-img-overlay {
     transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     /* background: rgb(255, 186, 33); */
     /* background: linear-gradient(0deg, rgba(255,186,33,0.3785889355742297) 0%, rgb(55, 33, 255) 100%); */
     /* background: linear-gradient(0deg, rgba(255,186,33,0.3785889355742297) 0%,  100%); */
     /* background-image: url('../body/images/camilo-fierro-z7rcwqCi77s-unsplash.jpg'); Replace 'your-image.jpg' with the path to your image */
     background-size: cover;
-    
-   
-    
-    background-position: center ;
+
+    background-position: center;
   }
 }
 @media (max-width: 767px) {
 }
-#card1{
-    background-image: url('../body/images/joe-caione-qO-PIF84Vxg-unsplash.jpg');
-   
+#card1 {
+  background-image: url("../body/images/joe-caione-qO-PIF84Vxg-unsplash.jpg");
 }
-#card2{
-    background-image: url(../body/images/jamie-street-wcO2PWLuQ3U-unsplash.jpg);
-   
+#card2 {
+  background-image: url(../body/images/jamie-street-wcO2PWLuQ3U-unsplash.jpg);
 }
-#card3{
-    background-image: url(../body/images/karsten-winegeart-qy0BHykaq0E-unsplash.jpg);
+#card3 {
+  background-image: url(../body/images/karsten-winegeart-qy0BHykaq0E-unsplash.jpg);
 }
 
-.section2{
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap:20px ;
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
 }
